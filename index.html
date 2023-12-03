@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Выбор автомобиля</title>
+</head>
+
+<body>
+    <form id="carForm">
+        <label for="brand">Выберите бренд:</label>
+        <select id="brand" name="brand" onchange="populateModels()"></select>
+
+        <label for="model">Выберите модель:</label>
+        <select id="model" name="model"></select>
+
+        <button type="button" onclick="submitData()">Отправить данные</button>
+    </form>
+
+    <div>
+        <input type="radio" name="dataType" value="carData" id="carRadio" onchange="showData()" checked>
+        <label for="carRadio">1. Авто</label>
+
+        <input type="radio" name="dataType" value="laptopData" id="laptopRadio" onchange="showData()">
+        <label for="laptopRadio">2. Ноутбуки</label>
+    </div>
+    
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
